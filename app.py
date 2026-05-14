@@ -5,7 +5,7 @@ import streamlit as st
 df = pd.read_csv("escuela_futbol.csv")
 
 # Convertir fecha
-df["FechaCompra"] = pd.to_datetime(df["FechaCompra"], dayfirst=True)
+df["FechaCompra"] = pd.to_datetime(df["FechaCompra"])
 
 # Crear columna Mes
 df["Mes"] = df["FechaCompra"].dt.month_name()
